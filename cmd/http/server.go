@@ -11,6 +11,12 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// Loads the necessary configurations and packages on initialization
+func init() {
+	// Loading environment variables
+	godotenv.Load()
+}
+
 type ServerType struct {
 	server *fiber.App
 }
@@ -31,9 +37,6 @@ func Server() *ServerType {
 }
 
 func (s *ServerType) Start() {
-	// Loading environment variables
-	godotenv.Load()
-
 	// Gets the host address and port from the environment variables API_HOST and API_PORT
 	host := os.Getenv("API_HOST")
 	port := os.Getenv("API_PORT")

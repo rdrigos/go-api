@@ -7,6 +7,11 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func init() {
+	// Loading environment variables
+	godotenv.Load()
+}
+
 // Response represents the structure of the JSON response
 type Response struct {
 	ENVIRONMENT string `json:"ENVIRONMENT"`
@@ -15,9 +20,6 @@ type Response struct {
 }
 
 func WelcomeController(c fiber.Ctx) error {
-	// Loading environment variables
-	godotenv.Load()
-
 	// Creates the response structure
 	response := Response{
 		ENVIRONMENT: os.Getenv("ENVIRONMENT"),
