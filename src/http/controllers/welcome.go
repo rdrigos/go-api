@@ -4,13 +4,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v3"
-	"github.com/joho/godotenv"
 )
-
-func init() {
-	// Loading environment variables
-	godotenv.Load()
-}
 
 // Response represents the structure of the JSON response
 type Response struct {

@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"go-api/cmd/http/controllers"
+	"go-api/src/http/controllers"
 
 	"github.com/gofiber/fiber/v3"
 )

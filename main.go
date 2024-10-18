@@ -1,8 +1,15 @@
 package main
 
 import (
-	"go-api/cmd/http"
+	"go-api/src/http"
+
+	"github.com/joho/godotenv"
 )
+
+func init() {
+	// Loading environment variables
+	godotenv.Load()
+}
 
 func main() {
 	// Creates an instance of the server

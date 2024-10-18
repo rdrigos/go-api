@@ -1,7 +1,7 @@
 package http
 
 import (
-	"go-api/cmd/http/routes"
+	"go-api/src/http/routes"
 
 	"github.com/gofiber/fiber/v3"
 )
